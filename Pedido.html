@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer namorar comigo?</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffebee;
+        }
+
+        #div {
+            text-align: center;
+            background-color: #ffc1e3;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.6);
+            border: 5px solid #ff6f91;
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            color: white;
+            background-color: #ff6f91;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff9bb0;
+        }
+
+        .btn:first-of-type {
+            background-color: #ff3366;
+        }
+
+        .btn:first-of-type:hover {
+            background-color: #ff8b94;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+        <h1>Aceita namorar comigo??</h1>
+        <button class="btn" onclick="SIM()">SIM</button>
+        <button class="btn" onmouseover="DESVIA(this)">NÃO</button>
+    </div>
+
+    <script>
+        function SIM() {
+            alert("AÍ SIM HEIN. ESCOLHEU DIREITINHO");
+        }
+
+        function DESVIA(t) {
+            var btn = t;
+            btn.style.position = "absolute";
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log("ih, não deu");
+        }
+
+        function geraPosicao(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min) + "%";
+        }
+    </script>
+</body>
+
+</html>
